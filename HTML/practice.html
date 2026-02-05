@@ -1,0 +1,390 @@
+<!-- <!DOCTYPE html>
+
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.dark-background {
+  background-color: #000000;
+}
+.bulb-image {
+  width: 150px;
+}
+.cat-image {
+  width: 300px;
+}
+.switch-board {
+  background-color: #7b8794;
+  width: 294px;
+  height: 139px;
+  border-radius: 12px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin: 16px;
+}
+.switch-status {
+  color: #ffffff;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+.on-switch {
+  color: #ffffff;
+  background-color: #cbd2d9;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: bold;
+  width: 99px;
+  height: 44px;
+  border-radius: 8px;
+  margin-left: 16px;
+}
+.off-switch {
+  color: #ffffff;
+  background-color: #e12d39;
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: bold;
+  width: 99px;
+  height: 44px;
+  border-radius: 8px;
+}
+  </style>
+  <body>
+    <div class="dark-background text-center">
+      <div>
+        <img
+          src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png"
+          class="bulb-image"
+          id = "bulbImage"
+         
+        />
+      </div>
+      <div>
+        <img
+          src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/cat-img.png"
+          class="cat-image"
+          id = "catImage"
+        />
+      </div>
+      <div class="d-flex flex-row justify-content-center pt-5">
+        <div class="switch-board">
+          <h1 class="switch-status" id = "switchStatus">Switched On</h1>
+          <button class="off-switch" id = "offSwitch" onclick = "switchOff()">
+            OFF
+          </button>
+          <button class="on-switch" id = "onSwitch" onclick = "switchOn()">
+            ON
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+    <script>
+        function switchOff() {
+          document.getElementById("bulbImage").src = "https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/bulb-go-off-img.png";
+          document.getElementById("catImage").src = "https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/cat-eyes-img.png";
+          document.getElementById("switchStatus").textContent = "Switched Off";
+          document.getElementById("offSwitch").style.backgroundColor = "red";
+          document.getElementById("onSwitch").style.backgroundColor = "#cbd2d9";
+
+        }
+
+        function switchOn() {
+          document.getElementById("bulbImage").src = "https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/bulb-go-on-img.png";
+          document.getElementById("catImage").src =  "https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/cat-img.png";
+           document.getElementById("switchStatus").textContent = "Switched On";
+           document.getElementById("onSwitch").style.backgroundColor = "green";
+           document.getElementById("offSwitch").style.backgroundColor = "#cbd2d9";
+        }
+        
+    </script>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+ 
+    .bg-container {
+      height: 100vh;
+    }
+
+    .counter-heading {
+      font-family: roboto;
+      font-size: 60px;
+       font-weight: 900;
+    }
+
+    .counter-value {
+      font-family: roboto;
+      font-size: 100px;
+       font-weight: 900;
+    }
+
+    .button {
+      margin: 8px;
+      border-radius: 7px;
+      padding: 5px;
+      border-width: 2px;
+      border-color: black;
+      background-color: #f1f5f8;
+    }
+
+  </style>
+
+
+  <body>
+    <div class="bg-container text-center d-flex flex-column justify-content-center ">
+      <h1 class = "counter-heading">Counter</h1>
+      <h1 class="counter-value" id = "counterValue">0</h1>
+      <div>
+        <button class="button" onClick="decrease()">DECREASE</button>
+        <button class="button" onClick = "reset()">RESET</button>
+        <button class="button" onClick="increase()">INCREASE</button>
+      </div>
+      
+    </div>
+
+  </body>
+  <script>
+
+    let counterElement = document.getElementById("counterValue");
+
+    function increase() {
+      let previousCounterValue = counterElement.textContent;
+      let updatedCounterValue = parseInt(previousCounterValue) + 1;
+      counterElement.textContent = updatedCounterValue;
+
+      if (counterElement.textContent > 0) {
+        counterElement.style.color = "Green";
+      } else if (counterElement.textContent < 0) {
+        counterElement.style.color = "Red";
+      } else {
+        counterElement.style.color = "black";
+      }
+    }
+
+    function decrease() {
+      let previousCounterValue = counterElement.textContent;
+      let updatedCounterValue = parseInt(previousCounterValue) - 1;
+      counterElement.textContent = updatedCounterValue;
+
+      if (counterElement.textContent > 0) {
+        counterElement.style.color = "Green";
+      } else if (counterElement.textContent < 0) {
+        counterElement.style.color = "Red";
+      } else {
+        counterElement.style.color = "black";
+      }
+    }
+
+    function reset() {
+      counterElement.textContent = 0;
+      counterElement.style.color = "black";
+    }
+
+
+
+    let RandomNumber = Math.random()*100;
+
+    console.log(RandomNumber);
+    console.log(Math.ceil(RandomNumber));
+
+
+  </script>
+</html> -->
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+    
+  
+  </style>
+
+
+  <body>
+    <div class="d-flex flex-column" style="max-width: fit-content;">
+      <p>User Name</p>
+      <input class="Text" id="inputText"/>
+
+      <p>Password</p>
+      <input class="password" />
+
+      <button class="mt-2" onClick = "signIn()">SignIn</button>
+      <p id= "verifyingText"></p>
+      
+    </div>
+
+  </body>
+  <script>
+
+    let inputElement = document.getElementById("inputText");
+    let signInElement = document.getElementById("verifyingText");
+
+    function signIn() {
+      let inputValue = inputElement.value;
+      let verifyText = "Hi " + inputValue + " Verifying your Account";
+      signInElement.textContent = verifyText;
+    }
+
+
+  
+  </script>
+</html>  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+    .bg-container {
+      background-color: #246db6;
+      height: 100vh;
+    }
+
+    .guess-game-img {
+      width: 100%;
+    }
+
+    .game-description {
+      color: #323f4b;
+      font-family: "Roboto";
+      font-size: 24px;
+      font-weight: 500;
+      margin-top: 20px;
+    }
+
+    .guess-bg-container {
+      background-color: #246db6;
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+
+    .guess-heading {
+      color: white;
+      font-family: "Roboto";
+      font-size: 34px;
+      font-weight: bold;
+    }
+
+    .guess-number-image {
+      width: 50px;
+    }
+
+    .user-input {
+      text-align: center;
+      color: #1f2933;
+      font-family: "Roboto";
+      font-size: 30px;
+      font-weight: 500;
+      width: 300px;
+      padding: 10px;
+    }
+
+    .game-result {
+      color: #ffffff;
+      font-family: "Roboto";
+      font-size: 24px;
+      font-weight: 500;
+      padding: 10px;
+    }
+
+    .check-guess {
+      width: 170px;
+      border-radius: 5px;
+      margin: 20px;
+      padding: 10px;
+    }
+
+  </style>
+  <body>
+    <div class="container-fluid bg-container">
+      <div class="row bg-white">
+        <div class="col-12 col-md-6 m-auto bg-white pt-5 pb-5">
+          <img
+            class="guess-game-img"
+            src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/guess-game-img.png"
+          />
+          <p class="text-center game-description">
+            Find out the right number between 1 to 100
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 guess-bg-container text-center">
+          <h1 class="guess-heading">
+            Guess The Number
+            <img
+              class="guess-number-image"
+              src="https://d2clawv67efefq.cloudfront.net/ccbp-dynamic-webapps/guess-number-img.png"
+            />
+          </h1>
+          <input type="text" class="user-input" id = "userInput"/>
+          <div>
+            <button class="btn btn-info check-guess" onClick = "checkGuess()">
+              Check
+            </button>
+          </div>
+          <p class="game-result" id = "gameResult"></p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let userInputElement = document.getElementById("userInput");
+    let resultElement = document.getElementById("gameResult");
+    let randomNumber = Math.ceil(Math.random() * 100);
+    console.log(randomNumber);
+
+    function checkGuess() {
+      let guessedNumber = parseInt(userInputElement.value);
+
+      if (guessedNumber > randomNumber) {
+        resultElement.textContent = "Too high! Try Again";
+        resultElement.style.backgroundColor = "#1e217c"
+      } else if (guessedNumber < randomNumber) {
+        resultElement.textContent = "Too low! Try Again";
+        resultElement.style.backgroundColor = "#1e217c"
+      } else if (guessedNumber === randomNumber) {
+        resultElement.textContent = "Congratulations You Got it Right ";
+        resultElement.style.backgroundColor = "Green"
+      } else {
+        resultElement.textContent = "Please Provide a Valid Input";
+        resultElement.style.backgroundColor = "Red"
+      }
+
+    }
+  </script>
+</html>

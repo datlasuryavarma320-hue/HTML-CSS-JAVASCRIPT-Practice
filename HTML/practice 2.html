@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap");
+
+.bg-container {
+    background-color: #f5f7fa;
+}
+
+.sizing-an-image-heading {
+    color: #1f2933;
+    font-family: "Roboto";
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.sizing-an-image-description {
+    color: #1f2933;
+    font-family: "Roboto";
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.warning-message {
+    color: #cf1124;
+    font-family: "Roboto";
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.image-width {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.buttons-container {
+    background-color: white;
+    width: 140px;
+}
+
+.button {
+    color: #323f4b;
+    background-color: white;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 700;
+    width: 35%;
+    height: 50px;
+    border-width: 0;
+}
+
+.heading {
+    color: blue;
+    font-size: 40px;
+    font-family: caveat;
+    text-decoration: underline;
+}
+
+.hr-line {
+    background-color: black;
+    width: 1px;
+    height: 20px;
+}
+
+.width-in-px {
+    color: #323f4b;
+    font-family: "Roboto";
+    font-size: 20px;
+    font-weight: 700;
+    margin: 10px;
+}
+</style>
+
+<body>
+    <div id = "myContainer"></div>
+    <div class="bg-container pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6 d-flex flex-column justify-content-center text-center text-md-left">
+                    <h1 class="sizing-an-image-heading">Sizing an Image</h1>
+                    <p class="sizing-an-image-description">Increase the width of an image by clicking the plus button and decrease by clicking the Minus button. For every action, the image increases or decreases by 5px.</p>
+                </div>
+                <div class="col-12 col-md-6 text-center">
+                    <p class="warning-message" id="warningMessage"></p>
+                    <img src="../Assets/Images/soho-logo.png" alt="image" id="image">
+                    <p class="image-width">Width: <span id="imageWidth"></span></p>
+                </div>
+                <div class="col-12">
+                    <div class="buttons-container d-flex flex-row shadow m-auto">
+                        <button class="button" id="decrementButton" onclick="onDecrement()">-</button>
+                        <hr class="hr-line" />
+                        <span class="width-in-px">5px</span>
+                        <hr class="hr-line" />
+                        <button class="button" id="incrementButton" onclick="onIncrement()">+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+    let imageElement = document.getElementById("image");
+    let imageWidthElement = document.getElementById("imageWidth");
+    let warningMessage = document.getElementById("warningMessage");
+
+    let maxImageWidth = 300;
+    let minImageWidth = 100;
+    let OriginalImageWidth = 150;
+    let maxwarningMessage = "Too big. Decrease the size of the Image.";
+    let minwarningMessage = "Can't Visible. Increase the size of the Image.";
+
+    imageElement.style.width = OriginalImageWidth + "px";
+    imageWidthElement.textContent = OriginalImageWidth + "px";
+
+        function onIncrement() {
+            if (OriginalImageWidth >= maxImageWidth) {
+                warningMessage.textContent = maxwarningMessage;
+            } else {
+                OriginalImageWidth += 5;
+                let UpdatedImageWidth = OriginalImageWidth + "px";
+                warningMessage.textContent = "";
+                
+                imageWidthElement.textContent = UpdatedImageWidth;
+                imageElement.style.width = UpdatedImageWidth;
+            }
+        }
+
+        function onDecrement() {
+            if (OriginalImageWidth <= minImageWidth) {
+                warningMessage.textContent = minwarningMessage;
+            } else {
+                OriginalImageWidth -= 5;
+                let UpdatedImageWidth = OriginalImageWidth + "px";
+                warningMessage.textContent = "";
+                
+                imageWidthElement.textContent = UpdatedImageWidth;
+                imageElement.style.width = UpdatedImageWidth;
+            }
+        }
+
+
+        let myArr = [ 1, 2, 'six', 4, 4.567];
+        myArr[2] = 3;
+        myArr.push(true,false,4,453,363,636,36,63,636,36,'six');
+        console.log(myArr);
+        let lengthOfArr = myArr.length
+        console.log(lengthOfArr);
+        console.log(myArr[3]);
+        let lastitemArr = myArr.pop();
+        console.log(myArr);
+        console.log(lastitemArr);
+
+        let h1Element = document.createElement('h1');
+        h1Element.textContent = "web technologies";
+         
+        let containerElement = document.getElementById("myContainer")
+        console.log(h1Element);
+        containerElement.appendChild(h1Element);
+
+        let removeStylesBtnElement = document.createElement('button');
+        removeStylesBtnElement.textContent = "remove styles";
+        
+        containerElement.appendChild(removeStylesBtnElement);
+        
+        removeStylesBtnElement.onclick = function(){
+            h1Element.classList.remove("heading");
+        }
+
+
+        let buttonElement = document.createElement('button');
+        buttonElement.onclick = function() {
+            if ( h1Element.textContent === "web technologies") {
+            h1Element.textContent = "4.0 techologies";
+            h1Element.classList.add("heading");
+            } else {
+            h1Element.textContent = "web technologies";
+            }
+        }
+        buttonElement.textContent = "Change Heading"
+        containerElement.appendChild(buttonElement);
+
+</script>
+
+</html>
