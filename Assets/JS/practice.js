@@ -1,4 +1,7 @@
 
+
+    // This is the Pratice2.html Code
+    // Start
     let imageElement = document.getElementById("image");
     let imageWidthElement = document.getElementById("imageWidth");
     let warningMessage = document.getElementById("warningMessage");
@@ -78,5 +81,57 @@
         }
         buttonElement.textContent = "Change Heading"
         containerElement.appendChild(buttonElement);
+
+        let pElement = document.createElement('p');
+        
+        pElement.textContent = "This is a Helper text";
+        
+        console.log(pElement);
+
+        document.getElementById("myContainer").appendChild(pElement);
+        
+        pElement.onclick = function() {
+            pElement.classList.add("helper-p");
+            console.log(pElement)
+        }
+
+    
+
+    
+
+
+    // End
+
+
+let arr = [1,2,3,4,5,true,"surya",8,9,10]
+
+console.log(arr[6]);
+
+arr[5] = 6;
+
+console.log(arr);
+
+console.log(arr.length);
+
+let myarr = arr.push(11);
+
+console.log(arr);
+
+myarr = arr.pop();
+
+console.log(arr);
+
+function MyShowMessage () {
+    console.log("Hello!")
+}
+
+MyShowMessage ();
+
+let showMessage = function() {
+        console.log("Hi")
+}
+
+showMessage();
+
 
 
