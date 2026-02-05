@@ -6,7 +6,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="../Assets/JS/practice.js"></script>
 </head>
 
 <style>
@@ -111,88 +110,5 @@
     </div>
 </body>
 
-<script>
-
-    let imageElement = document.getElementById("image");
-    let imageWidthElement = document.getElementById("imageWidth");
-    let warningMessage = document.getElementById("warningMessage");
-
-    let maxImageWidth = 300;
-    let minImageWidth = 100;
-    let OriginalImageWidth = 150;
-    let maxwarningMessage = "Too big. Decrease the size of the Image.";
-    let minwarningMessage = "Can't Visible. Increase the size of the Image.";
-
-    imageElement.style.width = OriginalImageWidth + "px";
-    imageWidthElement.textContent = OriginalImageWidth + "px";
-
-        function onIncrement() {
-            if (OriginalImageWidth >= maxImageWidth) {
-                warningMessage.textContent = maxwarningMessage;
-            } else {
-                OriginalImageWidth += 5;
-                let UpdatedImageWidth = OriginalImageWidth + "px";
-                warningMessage.textContent = "";
-                
-                imageWidthElement.textContent = UpdatedImageWidth;
-                imageElement.style.width = UpdatedImageWidth;
-            }
-        }
-
-        function onDecrement() {
-            if (OriginalImageWidth <= minImageWidth) {
-                warningMessage.textContent = minwarningMessage;
-            } else {
-                OriginalImageWidth -= 5;
-                let UpdatedImageWidth = OriginalImageWidth + "px";
-                warningMessage.textContent = "";
-                
-                imageWidthElement.textContent = UpdatedImageWidth;
-                imageElement.style.width = UpdatedImageWidth;
-            }
-        }
-
-
-        let myArr = [ 1, 2, 'six', 4, 4.567];
-        myArr[2] = 3;
-        myArr.push(true,false,4,453,363,636,36,63,636,36,'six');
-        console.log(myArr);
-        let lengthOfArr = myArr.length
-        console.log(lengthOfArr);
-        console.log(myArr[3]);
-        let lastitemArr = myArr.pop();
-        console.log(myArr);
-        console.log(lastitemArr);
-
-        let h1Element = document.createElement('h1');
-        h1Element.textContent = "web technologies";
-         
-        let containerElement = document.getElementById("myContainer")
-        console.log(h1Element);
-        containerElement.appendChild(h1Element);
-
-        let removeStylesBtnElement = document.createElement('button');
-        removeStylesBtnElement.textContent = "remove styles";
-        
-        containerElement.appendChild(removeStylesBtnElement);
-        
-        removeStylesBtnElement.onclick = function(){
-            h1Element.classList.remove("heading");
-        }
-
-
-        let buttonElement = document.createElement('button');
-        buttonElement.onclick = function() {
-            if ( h1Element.textContent === "web technologies") {
-            h1Element.textContent = "4.0 techologies";
-            h1Element.classList.add("heading");
-            } else {
-            h1Element.textContent = "web technologies";
-            }
-        }
-        buttonElement.textContent = "Change Heading"
-        containerElement.appendChild(buttonElement);
-
-</script>
-
+    <script src="../Assets/JS/practice.js"></script>
 </html>
