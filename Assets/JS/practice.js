@@ -141,4 +141,12 @@ let person = {
     "1": "value 1"    
 }
 
+
+let Company = {
+    Name: "solvenyle",
+    location: "Vizag",
+    Department: "IT",
+    Founded: 2019
+}
+
 console.log(person);
