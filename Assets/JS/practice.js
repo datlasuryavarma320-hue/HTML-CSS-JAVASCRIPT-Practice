@@ -133,5 +133,12 @@ let showMessage = function() {
 
 showMessage();
 
+let person = {
+    Name: "Surya",
+    Age: 28,
+    Gender: "Male",
+    "My City": "Vizag",
+    "1": "value 1"    
+}
 
-
+console.log(person);
